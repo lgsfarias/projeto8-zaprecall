@@ -1,0 +1,25 @@
+.welcome-container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+Button {
+    margin-top: 73px;
+}
+
+img{
+    width: 55px;
+    margin-bottom: 0;
+}
+
+h1 {
+    font-family: 'Righteous';
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 31px;
+    color: #fff;
+}
