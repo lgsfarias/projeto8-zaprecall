@@ -1,0 +1,25 @@
+select {
+    width: 141px;
+    height: 25px;
+    background: #FFFFFF;
+    border-radius: 5px;
+    margin-bottom: 5px;
+
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 9px;
+    color: #ADADAD;
+
+    outline: none;
+
+    font-family: 'Recursive';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: #000
+}
+
+option[value=""][disabled] {
+    display: none;
+}

@@ -1,9 +1,6 @@
-.screen2-container {
-    padding-bottom: 50px;
-}
-
 .card{
     width: calc(100vw - 20px) ;
+    max-width: 340px;
     height: 40px;
     background: #FFFFFF;
     box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
@@ -46,6 +43,7 @@
 .card-pergunta, .card-resposta{
     position: relative;
     width: calc(100vw - 20px) ;
+    max-width: 340px;
     height: 100%;
     min-height: 80px;
     background: #FFFFD5;

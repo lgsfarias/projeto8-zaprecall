@@ -1,7 +1,11 @@
+// import React, { useState, useEffect } from 'react';
+import Button from './Button';
 import './Footer.css';
 
 const Footer = (props) => {
-    const { concluidos, cards, sequencia, finalizado, naoLembrou } = props;
+    const { concluidos, cards, sequencia, finalizado, naoLembrou, setScreen } =
+        props;
+
     if (!finalizado) {
         return (
             <div className="footer-container">
@@ -32,6 +36,10 @@ const Footer = (props) => {
                     </div>
                 )}
                 <div className="sequencia">{sequencia}</div>
+                <Button
+                    handleClick={() => setScreen('Welcome')}
+                    mensagem={'REINICIAR RECALL'}
+                />
             </div>
         );
     }
