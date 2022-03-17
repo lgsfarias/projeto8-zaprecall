@@ -1,9 +1,13 @@
 import './Footer.css';
 
-const Footer = () => {
+const Footer = (props) => {
+    const { concluidos, cards, sequencia } = props;
     return (
         <div className="footer-container">
-            <p>0/4 CONCLUÍDOS</p>
+            <p>
+                {concluidos}/{cards.length} CONCLUÍDOS
+            </p>
+            <div className="sequencia">{sequencia}</div>
         </div>
     );
 };
