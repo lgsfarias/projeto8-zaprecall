@@ -16,6 +16,7 @@ const GameScreen = (props) => {
     return (
         <div className="GameScreen-container">
             <Header />
+
             {cards.map((elem, index) => (
                 <Card
                     {...elem}
