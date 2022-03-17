@@ -12,7 +12,7 @@
     align-items: center;
 }
 
-p{
+.footer-container>p{
     font-family: 'Recursive';
     font-weight: 400;
     font-size: 12px;
@@ -41,4 +41,41 @@ p{
     flex-direction: row;
     justify-content: center;
     align-items: center;
+}
+
+.congrats {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.congrats>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.congrats img {
+    width: 18px;
+}
+
+.congrats>div>p {
+    font-family: 'Recursive';
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+
+    color: #333333;
+}
+
+.congrats>p {
+    margin-top: 10px;
+    font-family: 'Recursive';
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    
+    color: #333333;
 }

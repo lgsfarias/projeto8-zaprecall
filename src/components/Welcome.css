@@ -11,15 +11,15 @@ Button {
     margin-top: 73px;
 }
 
-img{
-    width: 65px;
+.welcome-container img{
+    width: 55px;
     margin-bottom: 0;
 }
 
 h1 {
     font-family: 'Righteous';
     font-weight: 400;
-    font-size: 25px;
+    font-size: 28px;
     line-height: 31px;
     color: #fff;
 }

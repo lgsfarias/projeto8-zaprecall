@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Card.css';
 
 const Card = (props) => {
@@ -10,9 +10,16 @@ const Card = (props) => {
         concluidos,
         sequencia,
         setSequencia,
+        cards,
+        setFinalizado,
+        setNaoLembrou,
     } = props;
     const [etapa, setEtapa] = useState('escondido');
     const [resultado, setResultado] = useState('naoRespondido');
+
+    useEffect(() => {
+        setFinalizado(cards.length === concluidos);
+    });
 
     switch (etapa) {
         case 'escondido':
@@ -72,6 +79,7 @@ const Card = (props) => {
                                         <ion-icon name="close-circle"></ion-icon>
                                     </div>,
                                 ]);
+                                setNaoLembrou(true);
                             }}
                         >
                             <p>Não lembrei</p>
@@ -117,18 +125,6 @@ const Card = (props) => {
         default:
             break;
     }
-    // if (etapa === 'escondido') {
-    //     return (
-    //         <div className="card" onClick={() => console.log(numero)}>
-    //             <p>Pergunta {numero}</p>
-    //             <ion-icon name="play-outline"></ion-icon>
-    //         </div>
-    //     );
-    // }
 };
-
-// <ion-icon name="checkmark-circle"></ion-icon>
-// <ion-icon name="close-circle"></ion-icon>
-// <ion-icon name="help-circle"></ion-icon>
 
 export default Card;

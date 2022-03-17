@@ -1,6 +1,7 @@
 import './Button.css';
-const Button = () => {
-    return <button>Iniciar Recall!</button>;
+const Button = (props) => {
+    const { handleClick, mensagem } = props;
+    return <button onClick={handleClick}>{mensagem}</button>;
 };
 
 export default Button;

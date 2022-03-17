@@ -1,5 +1,6 @@
 // import React, { useState, useEffect } from 'react';
 import './Welcome.css';
+import Button from './Button';
 
 const Welcome = (props) => {
     const { setScreen } = props;
@@ -7,9 +8,11 @@ const Welcome = (props) => {
         <div className="welcome-container">
             <img src="./images/logo.png" alt="logo" />
             <h1>ZapRecall</h1>
-            <button onClick={() => setScreen('Screen2')}>
-                Iniciar Recall!
-            </button>
+            <Button
+                {...props}
+                handleClick={() => setScreen('Screen2')}
+                mensagem={'Iniciar Recall!'}
+            />
         </div>
     );
 };
