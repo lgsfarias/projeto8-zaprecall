@@ -47,8 +47,7 @@
 .card {
     width: calc(100vw - 40px) ;
     max-width: 680px;
-    height: 100%;
-    min-height:160px;
+    height: clamp(200px, calc(268px - 10vw) , 230px);
     position: relative;
     margin: 10px auto;
   }
