@@ -13,6 +13,7 @@ const Card = (props) => {
         cards,
         setFinalizado,
         setNaoLembrou,
+        acertou,
     } = props;
     const [etapa, setEtapa] = useState('escondido');
     const [resultado, setResultado] = useState('naoRespondido');
@@ -98,6 +99,7 @@ const Card = (props) => {
                                             <ion-icon name="help-circle"></ion-icon>
                                         </div>,
                                     ]);
+                                    acertou();
                                 }}
                             >
                                 <p>Quase não lembrei</p>
@@ -117,6 +119,7 @@ const Card = (props) => {
                                             <ion-icon name="checkmark-circle"></ion-icon>
                                         </div>,
                                     ]);
+                                    acertou();
                                 }}
                             >
                                 <p>Zap!</p>

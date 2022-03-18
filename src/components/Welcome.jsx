@@ -4,7 +4,7 @@ import Button from './Button';
 import SelectDeck from './SelectDeck';
 
 const Welcome = (props) => {
-    const { selectedDeck, setScreen, setSelectedDeck, decks } = props;
+    const { selectedDeck, setScreen, setSelectedDeck, decks, setMeta } = props;
     const [disabled, setDisabled] = useState(true);
 
     useEffect(() => {
@@ -22,6 +22,23 @@ const Welcome = (props) => {
                 setSelectedDeck={setSelectedDeck}
                 selectedDeck={selectedDeck}
             />
+            {selectedDeck ? (
+                <>
+                    <p className="deck-description">
+                        Este deck tem {decks[selectedDeck].length} cartas
+                    </p>
+                    <input
+                        type="number"
+                        name="meta"
+                        min="1"
+                        max={decks[selectedDeck].length}
+                        placeholder="Escolha uma meta!"
+                        onChange={(e) => setMeta(e.target.value)}
+                    />
+                </>
+            ) : (
+                <p className="deck-description">Selecione um deck</p>
+            )}
             <Button
                 {...props}
                 disabled={disabled}

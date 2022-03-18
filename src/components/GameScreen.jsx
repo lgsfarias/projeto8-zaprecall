@@ -5,13 +5,17 @@ import Header from './Header';
 import './GameScreen.css';
 
 const GameScreen = (props) => {
-    const { decks, setScreen, selectedDeck } = props;
+    const { decks, setScreen, selectedDeck, acertos, setAcertos, meta } = props;
     const [concluidos, setConcluidos] = useState(0);
     const [sequencia, setSequencia] = useState([]);
     const [finalizado, setFinalizado] = useState(false);
     const [naoLembrou, setNaoLembrou] = useState(false);
     let cards = decks[selectedDeck];
     cards.sort(() => Math.random() - 0.5);
+
+    function acertou() {
+        setAcertos(acertos + 1);
+    }
 
     return (
         <div className="GameScreen-container">
@@ -29,6 +33,7 @@ const GameScreen = (props) => {
                     setSequencia={setSequencia}
                     setFinalizado={setFinalizado}
                     setNaoLembrou={setNaoLembrou}
+                    acertou={acertou}
                 />
             ))}
             <Footer
@@ -38,6 +43,9 @@ const GameScreen = (props) => {
                 finalizado={finalizado}
                 naoLembrou={naoLembrou}
                 setScreen={setScreen}
+                acertos={acertos}
+                setAcertos={setAcertos}
+                meta={meta}
             />
         </div>
     );
