@@ -2,9 +2,11 @@ import React, { useState, useEffect } from 'react';
 import './Welcome.css';
 import Button from './Button';
 import SelectDeck from './SelectDeck';
+import Contador from './Contador';
 
 const Welcome = (props) => {
-    const { selectedDeck, setScreen, setSelectedDeck, decks, setMeta } = props;
+    const { selectedDeck, setScreen, setSelectedDeck, decks, meta, setMeta } =
+        props;
     const [disabled, setDisabled] = useState(true);
 
     useEffect(() => {
@@ -21,19 +23,18 @@ const Welcome = (props) => {
                 decks={decks}
                 setSelectedDeck={setSelectedDeck}
                 selectedDeck={selectedDeck}
+                setMeta={setMeta}
             />
             {selectedDeck ? (
                 <>
                     <p className="deck-description">
                         Este deck tem {decks[selectedDeck].length} cartas
                     </p>
-                    <input
-                        type="number"
-                        name="meta"
-                        min="1"
+                    <p className="deck-description">Defina uma meta:</p>
+                    <Contador
                         max={decks[selectedDeck].length}
-                        placeholder="Escolha uma meta!"
-                        onChange={(e) => setMeta(e.target.value)}
+                        meta={meta}
+                        setMeta={setMeta}
                     />
                 </>
             ) : (

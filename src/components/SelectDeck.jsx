@@ -2,7 +2,7 @@ import React from 'react';
 import './SelectDeck.css';
 
 const SelectDeck = (props) => {
-    const { selectedDeck, setSelectedDeck, decks } = props;
+    const { selectedDeck, setSelectedDeck, decks, setMeta } = props;
     const deckNames = Object.keys(decks);
 
     return (
@@ -11,6 +11,7 @@ const SelectDeck = (props) => {
             defaultValue={selectedDeck}
             onChange={(e) => {
                 setSelectedDeck(e.target.value);
+                setMeta(0);
             }}
         >
             <option value="" disabled>

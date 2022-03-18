@@ -155,6 +155,7 @@ const App = () => {
                     setScreen={setScreen}
                     setSelectedDeck={setSelectedDeck}
                     selectedDeck={selectedDeck}
+                    meta={meta}
                     setMeta={setMeta}
                 />
             )}

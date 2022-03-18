@@ -1,0 +1,54 @@
+.contador {
+    display: flex;
+    margin: 10px auto;
+    border-radius: 10px;
+    border: 2px solid #D70900;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+.decrementar {
+    border-radius: 10px 0px 0px 10px;
+    height: 50px;
+    width: 40px;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.018em;
+    cursor: pointer;
+    background-color: #fff;
+    color: #D70900;
+    border-right: 2px solid #D70900;
+}
+.incrementar {
+    border-radius: 0px 10px 10px 0px;
+    height: 50px;
+    width: 40px;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.018em;
+    cursor: pointer;
+    background-color: #fff;
+    color: #D70900;
+    border-left: 2px solid #D70900;
+}
+
+.valor {
+    width: 202px;
+    height: 50px;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    background-color: #fff;
+    color: #D70900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
