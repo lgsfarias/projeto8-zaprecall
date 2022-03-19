@@ -12,4 +12,4 @@
 -   You must inform whether or not he remembered the answer;
 -   At the end it is informed if he completed the goal or not.
 
-<img src="./README-images/ZapRecall.png">
+<img src="./public/README-images/ZapRecall.png">
