@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import Card from './Card';
-import Footer from './Footer';
-import Header from './Header';
+import Card from '../Card/Card';
+import Footer from '../Footer/Footer';
+import Header from '../Header/Header';
 import './GameScreen.css';
 
 const GameScreen = (props) => {

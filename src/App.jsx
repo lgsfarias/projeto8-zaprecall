@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import Welcome from './components/Welcome';
-import './App.css';
-import GameScreen from './components/GameScreen';
+import Welcome from './components/Welcome/Welcome';
+import GameScreen from './components/GameScreen/GameScreen';
 
 const App = () => {
     const decks = {

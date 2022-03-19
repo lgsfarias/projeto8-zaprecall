@@ -1,6 +1,8 @@
 // import React, { useState, useEffect } from 'react';
-import Button from './Button';
+import Button from '../Button/Button';
 import './Footer.css';
+import sad from '../../assets/images/sad.png';
+import party from '../../assets/images/party.png';
 
 const Footer = (props) => {
     const {
@@ -31,16 +33,14 @@ const Footer = (props) => {
                     {naoLembrou ? (
                         <div className="congrats">
                             <div>
-                                <img src="./images/sad.png" alt="sad" />{' '}
-                                <p>PUTZ!</p>
+                                <img src={sad} alt="sad" /> <p>PUTZ!</p>
                             </div>
                             <p>Ainda faltaram alguns...Mas não desanime!</p>
                         </div>
                     ) : (
                         <div className="congrats">
                             <div>
-                                <img src="./images/party.png" alt="party" />{' '}
-                                <p>PARABÉNS!</p>
+                                <img src={party} alt="party" /> <p>PARABÉNS!</p>
                             </div>
                             <p>Você não esqueceu de nenhum flashcard!</p>
                         </div>
@@ -61,8 +61,7 @@ const Footer = (props) => {
                     {acertos < meta ? (
                         <div className="congrats">
                             <div>
-                                <img src="./images/sad.png" alt="sad" />{' '}
-                                <p>PUTZ!</p>
+                                <img src={sad} alt="sad" /> <p>PUTZ!</p>
                             </div>
                             <p>
                                 Infelizmente não atingiu a meta por{' '}
@@ -75,8 +74,7 @@ const Footer = (props) => {
                     ) : (
                         <div className="congrats">
                             <div>
-                                <img src="./images/party.png" alt="party" />{' '}
-                                <p>PARABÉNS!</p>
+                                <img src={party} alt="party" /> <p>PARABÉNS!</p>
                             </div>
                             <p>Você atingiu a sua meta de acertos!</p>
                         </div>

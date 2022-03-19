@@ -5,12 +5,12 @@
     margin-bottom: 40px;
 }
 
-img {
+.header-container img {
     width: 52px;
     margin-right: 20px;
 }
 
-h2 {
+.header-container h2 {
     font-family: 'Righteous';
     font-style: normal;
     font-weight: 400;

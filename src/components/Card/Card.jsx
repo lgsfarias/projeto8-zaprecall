@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Card.css';
+import setinha from '../../assets/images/setinha.svg';
 
 const Card = (props) => {
     const {
@@ -56,7 +57,7 @@ const Card = (props) => {
                         <p>{pergunta}</p>
                         <img
                             id="setinha"
-                            src="./images/setinha.svg"
+                            src={setinha}
                             alt="setinha"
                             onClick={() => setVirado(true)}
                         />

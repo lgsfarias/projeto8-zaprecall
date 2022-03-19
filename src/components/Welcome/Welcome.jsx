@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import './Welcome.css';
-import Button from './Button';
-import SelectDeck from './SelectDeck';
-import Contador from './Contador';
+import Button from '../Button/Button';
+import SelectDeck from '../SelectDeck/SelectDeck';
+import Contador from '../Contador/Contador';
+import logo from '../../assets/images/logo.png';
 
 const Welcome = (props) => {
     const { selectedDeck, setScreen, setSelectedDeck, decks, meta, setMeta } =
@@ -17,7 +18,7 @@ const Welcome = (props) => {
 
     return (
         <div className="welcome-container">
-            <img src="./images/logo.png" alt="logo" />
+            <img src={logo} alt="logo" />
             <h1>ZapRecall</h1>
             <SelectDeck
                 decks={decks}
