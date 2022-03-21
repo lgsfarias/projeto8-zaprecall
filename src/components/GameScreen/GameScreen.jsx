@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Card from '../Card/Card';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
@@ -10,15 +10,25 @@ const GameScreen = (props) => {
     const [sequencia, setSequencia] = useState([]);
     const [finalizado, setFinalizado] = useState(false);
     const [naoLembrou, setNaoLembrou] = useState(false);
-    let cards = decks[selectedDeck];
     const [iniciado, setIniciado] = useState(false);
-    if (!iniciado) {
-        cards.sort(() => Math.random() - 0.5);
-    }
+    const [cards, setCards] = useState(decks[selectedDeck]);
 
     function acertou() {
         setAcertos(acertos + 1);
     }
+
+    console.log(cards);
+    console.log(iniciado);
+
+    useEffect(() => {
+        if (iniciado === false) {
+            let shuffledCards = cards;
+            shuffledCards.sort(() => Math.random() - 0.5);
+            setCards(shuffledCards);
+
+            setIniciado(true);
+        }
+    }, [iniciado, cards]);
 
     return (
         <div className="GameScreen-container">
@@ -51,6 +61,7 @@ const GameScreen = (props) => {
                 acertos={acertos}
                 setAcertos={setAcertos}
                 meta={meta}
+                setIniciado={setIniciado}
             />
         </div>
     );

@@ -15,7 +15,6 @@ const Card = (props) => {
         setFinalizado,
         setNaoLembrou,
         acertou,
-        iniciado,
         setIniciado,
     } = props;
     const [etapa, setEtapa] = useState('escondido');
@@ -24,6 +23,7 @@ const Card = (props) => {
 
     useEffect(() => {
         setFinalizado(cards.length === concluidos);
+        setIniciado(true);
     });
 
     switch (etapa) {
@@ -34,9 +34,6 @@ const Card = (props) => {
                     onClick={() => {
                         if (resultado === 'naoRespondido') {
                             setEtapa('pergunta');
-                            if (!iniciado) {
-                                setIniciado(true);
-                            }
                         }
                     }}
                 >

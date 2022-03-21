@@ -15,6 +15,7 @@ const Footer = (props) => {
         acertos,
         setAcertos,
         meta,
+        setIniciado,
     } = props;
 
     if (!finalizado) {
@@ -49,6 +50,7 @@ const Footer = (props) => {
                     <Button
                         handleClick={() => {
                             setAcertos(0);
+                            setIniciado(false);
                             setScreen('Welcome');
                         }}
                         mensagem={'REINICIAR RECALL'}
@@ -83,6 +85,7 @@ const Footer = (props) => {
                     <Button
                         handleClick={() => {
                             setAcertos(0);
+                            setIniciado(false);
                             setScreen('Welcome');
                         }}
                         mensagem={'REINICIAR RECALL'}
