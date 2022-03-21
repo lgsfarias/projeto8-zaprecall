@@ -17,9 +17,6 @@ const GameScreen = (props) => {
         setAcertos(acertos + 1);
     }
 
-    console.log(cards);
-    console.log(iniciado);
-
     useEffect(() => {
         if (iniciado === false) {
             let shuffledCards = cards;
