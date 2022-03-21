@@ -15,6 +15,8 @@ const Card = (props) => {
         setFinalizado,
         setNaoLembrou,
         acertou,
+        iniciado,
+        setIniciado,
     } = props;
     const [etapa, setEtapa] = useState('escondido');
     const [resultado, setResultado] = useState('naoRespondido');
@@ -32,6 +34,9 @@ const Card = (props) => {
                     onClick={() => {
                         if (resultado === 'naoRespondido') {
                             setEtapa('pergunta');
+                            if (!iniciado) {
+                                setIniciado(true);
+                            }
                         }
                     }}
                 >

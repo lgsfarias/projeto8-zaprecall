@@ -11,7 +11,10 @@ const GameScreen = (props) => {
     const [finalizado, setFinalizado] = useState(false);
     const [naoLembrou, setNaoLembrou] = useState(false);
     let cards = decks[selectedDeck];
-    cards.sort(() => Math.random() - 0.5);
+    const [iniciado, setIniciado] = useState(false);
+    if (!iniciado) {
+        cards.sort(() => Math.random() - 0.5);
+    }
 
     function acertou() {
         setAcertos(acertos + 1);
@@ -34,6 +37,8 @@ const GameScreen = (props) => {
                     setFinalizado={setFinalizado}
                     setNaoLembrou={setNaoLembrou}
                     acertou={acertou}
+                    iniciado={iniciado}
+                    setIniciado={setIniciado}
                 />
             ))}
             <Footer
